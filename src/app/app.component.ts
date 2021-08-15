@@ -8,7 +8,6 @@ import { Satellite } from './satellite';
 })
 export class AppComponent {
   title = 'orbit-report';
-
   sourceList: Satellite[];
   displayList: Satellite[];
 
@@ -19,7 +18,6 @@ export class AppComponent {
 
 		window.fetch(satellitesUrl).then(function (response) {
 			response.json().then(function (data) {
-
 				let fetchedSatellites = data.satellites;
 				// loop over satellites
 				for(let i=0; i < fetchedSatellites.length; i++) {
